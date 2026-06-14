@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Devistic's portfolio — stunning websites built for parlors, beauty salons, barbershops, and local businesses. Real results, real design." />
+  <meta name="keywords" content="Devistic portfolio, website designs, beauty salon websites, barbershop websites, local business web design" />
+  <title>Portfolio — Devistic</title>
+  <link rel="canonical" href="https://devistic.agency/portfolio" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css" />
+</head>
+<body>
+
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-name">Devistic</span><span class="cursor"></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="theme-toggle-wrap">
+          <span class="theme-icon">☀️</span>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme"></button>
+          <span class="theme-icon">🌙</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="font-size:0.78rem;padding:0.6rem 1.2rem;">Get a Quote</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="reveal">
+        <p class="section-label">Our Work</p>
+        <h1>Work That Speaks<br><span class="grad-text">Louder Than Words</span></h1>
+        <p>Real projects, real results. Every site we've built has a story — here are some of our favorites.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio Grid -->
+  <section class="section-pad">
+    <div class="container">
+      <!-- Filter tabs -->
+      <div class="reveal" style="display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:3rem;">
+        <button class="btn btn-primary" style="padding:0.5rem 1.25rem;font-size:0.8rem;" onclick="filterPortfolio('all',this)">All Projects</button>
+        <button class="btn btn-outline" style="padding:0.5rem 1.25rem;font-size:0.8rem;" onclick="filterPortfolio('salon',this)">Beauty & Salon</button>
+        <button class="btn btn-outline" style="padding:0.5rem 1.25rem;font-size:0.8rem;" onclick="filterPortfolio('barber',this)">Barbershop</button>
+        <button class="btn btn-outline" style="padding:0.5rem 1.25rem;font-size:0.8rem;" onclick="filterPortfolio('business',this)">Local Business</button>
+        <button class="btn btn-outline" style="padding:0.5rem 1.25rem;font-size:0.8rem;" onclick="filterPortfolio('ecom',this)">E-Commerce</button>
+      </div>
+
+      <div class="portfolio-grid">
+        <!-- Project 1 -->
+        <div class="portfolio-card reveal delay-1" data-cat="salon">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0D3B66,#1a5276);">
+            💄
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">Beauty Salon</p>
+            <h3 class="portfolio-title">Glow Beauty Studio</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">Full rebrand + website. Online booking integration increased appointments by 40%.</p>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="portfolio-card reveal delay-2" data-cat="barber">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a3a5c,#EE964B,#0d3b66);">
+            ✂️
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">Barbershop</p>
+            <h3 class="portfolio-title">Elite Cuts Barbershop</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">Dark, premium design with appointment booking. Google rank jumped from page 4 to page 1.</p>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="portfolio-card reveal delay-3" data-cat="salon">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#F4D35E,#EE964B,#F95738);">
+            💅
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">Nail Studio</p>
+            <h3 class="portfolio-title">The Nail Lounge</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">Vibrant brand identity + e-commerce for nail kits. 3x organic traffic in 3 months.</p>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="portfolio-card reveal delay-1" data-cat="business">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0d3b66,#2c3e50);">
+            🏢
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">Local Business</p>
+            <h3 class="portfolio-title">Prestige Services Co.</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">Clean professional site with lead capture form. Doubled monthly enquiries in 6 weeks.</p>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="portfolio-card reveal delay-2" data-cat="ecom">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#EE964B,#F95738,#0d3b66);">
+            🛍️
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">E-Commerce</p>
+            <h3 class="portfolio-title">Luxe Hair & Spa Shop</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">Full WooCommerce store for hair care products. First-month online revenue: $8,400.</p>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="portfolio-card reveal delay-3" data-cat="salon">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#FAF0CA,#F4D35E,#EE964B);">
+            🌸
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">Beauty Studio</p>
+            <h3 class="portfolio-title">Blossom Beauty Bar</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">Elegant floral branding, gallery, and booking. PageSpeed 97. Client waitlist grew 5x.</p>
+          </div>
+        </div>
+
+        <!-- Project 7 -->
+        <div class="portfolio-card reveal delay-1" data-cat="barber">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#1a1a2e,#16213e,#0f3460);">
+            🪒
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">Barbershop</p>
+            <h3 class="portfolio-title">Kings & Fades Studio</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">Minimal dark aesthetic with video hero. Positioned as premium brand in competitive market.</p>
+          </div>
+        </div>
+
+        <!-- Project 8 -->
+        <div class="portfolio-card reveal delay-2" data-cat="business">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#0d3b66,#EE964B);">
+            🍃
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">Wellness</p>
+            <h3 class="portfolio-title">Serenity Spa Collective</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">Calming multi-location spa site with member portal and gift card system.</p>
+          </div>
+        </div>
+
+        <!-- Project 9 -->
+        <div class="portfolio-card reveal delay-3" data-cat="ecom">
+          <div class="portfolio-thumb" style="background:linear-gradient(135deg,#F4D35E,#0D3B66);">
+            ✨
+            <div class="portfolio-overlay">
+              <a href="#" class="btn btn-primary" style="font-size:0.78rem;padding:0.5rem 1rem;">View Live</a>
+              <a href="#" class="btn btn-outline" style="font-size:0.78rem;padding:0.5rem 1rem;color:white;border-color:rgba(255,255,255,0.4);">Case Study</a>
+            </div>
+          </div>
+          <div class="portfolio-body">
+            <p class="portfolio-tag">E-Commerce</p>
+            <h3 class="portfolio-title">GlowKit Cosmetics</h3>
+            <p style="font-size:0.83rem;color:var(--text-2);margin-top:0.4rem;">DTC beauty brand launch. Custom Shopify theme + SEO strategy. 4k sales in month one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Slogan Banner -->
+  <section style="background:var(--bg-alt);padding:4rem 0;text-align:center;">
+    <div class="container reveal">
+      <p class="section-label" style="justify-content:center;">Our Promise</p>
+      <h2 style="font-family:var(--font-display);font-size:clamp(2.5rem,5vw,4.5rem);font-weight:700;color:var(--text-1);line-height:1.05;">
+        Every pixel. Every line of code.<br>
+        <span class="grad-text">Cooked to Perfection.</span>
+      </h2>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-content reveal">
+        <h2>Your Project Could Be<br><span class="grad-text">Featured Here.</span></h2>
+        <p>Let's build something you're proud to show the world.</p>
+        <a href="contact.html" class="btn btn-primary">Start Your Project</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Devistic<span class="cursor"></span></div>
+          <p>Cooked to perfection — web solutions for businesses that refuse to blend in.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="pricing.html">Web Development</a></li>
+            <li><a href="pricing.html">Speed Optimization</a></li>
+            <li><a href="pricing.html">SEO</a></li>
+            <li><a href="pricing.html">Cybersecurity</a></li>
+            <li><a href="pricing.html">Web Care</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@devistic.agency">hello@devistic.agency</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Devistic. All rights reserved.</p>
+        <div style="display:flex;gap:1.5rem;"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
+  <script src="main.js"></script>
+  <script>
+    function filterPortfolio(cat, btn) {
+      document.querySelectorAll('.portfolio-card').forEach(card => {
+        const show = cat === 'all' || card.dataset.cat === cat;
+        card.style.display = show ? '' : 'none';
+      });
+      document.querySelectorAll('.nav-actions ~ div button, section button').forEach(b => b.className = 'btn btn-outline');
+      btn.className = 'btn btn-primary';
+    }
+  </script>
+</body>
+</html>

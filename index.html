@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Devistic — a cutting-edge web development agency helping local businesses grow online. Web design, SEO, speed optimization & cybersecurity. Cooked to perfection." />
+  <meta name="keywords" content="web development, SEO, speed optimization, cybersecurity, web care, parlor websites, beauty salon websites, Devistic" />
+  <meta name="author" content="Devistic" />
+  <meta property="og:title" content="Devistic — Cooked to Perfection" />
+  <meta property="og:description" content="We build modern, stunning websites for local businesses. Trusted by parlors, salons & more." />
+  <meta property="og:type" content="website" />
+  <title>Devistic — Cooked to Perfection</title>
+  <link rel="canonical" href="https://devistic.agency/" />
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ════════════════════════════ NAVBAR ════════════════════════════ -->
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo" aria-label="Devistic home">
+        <span class="logo-name">Devistic</span><span class="cursor" aria-hidden="true"></span>
+      </a>
+
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="pages/about.html">About Us</a></li>
+        <li><a href="pages/portfolio.html">Portfolio</a></li>
+        <li><a href="pages/pricing.html">Pricing</a></li>
+        <li><a href="pages/blog.html">Blog</a></li>
+        <li><a href="pages/contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <div class="theme-toggle-wrap" aria-label="Theme toggle">
+          <span class="theme-icon" aria-hidden="true">☀️</span>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme"></button>
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="font-size:0.78rem;padding:0.6rem 1.2rem;">Get a Quote</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════ HERO ═══════════════════════════════ -->
+  <section class="hero" aria-label="Hero section">
+    <div class="hero-bg"></div>
+    <div class="hero-grid-overlay" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+    <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-label">Web Development Agency</p>
+        <h1 class="hero-title">
+          Digital Solutions<br>
+          <span class="hl">Cooked to</span><br>
+          Perfection.
+        </h1>
+        <p class="hero-desc">
+          We build stunning, fast, and secure websites for local businesses —
+          from parlors to premium brands. Your online presence, reimagined.
+          <br><br>
+          Specializing in <strong id="typing-text" style="color:#F4D35E;"></strong><span style="color:#EE964B;animation:blink 1s step-end infinite;display:inline-block;width:2px;height:1em;vertical-align:middle;background:#EE964B;margin-left:2px;"></span>
+        </p>
+        <div class="hero-cta">
+          <a href="portfolio.html" class="btn btn-primary">View Our Work</a>
+          <a href="contact.html" class="btn btn-outline" style="color:rgba(250,240,202,0.85);border-color:rgba(250,240,202,0.3);">Start a Project ↗</a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-browser">
+          <div class="browser-bar">
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-dot"></div>
+            <div class="browser-url">devistic.agency/client-site</div>
+          </div>
+          <div class="browser-content">
+            <div class="code-line"><span class="code-num">1</span><span><span class="code-comment">// Devistic — Built with precision</span></span></div>
+            <div class="code-line"><span class="code-num">2</span><span><span class="code-keyword">const</span> <span class="code-func">website</span> = {</span></div>
+            <div class="code-line"><span class="code-num">3</span><span>&nbsp;&nbsp;speed: <span class="code-str">'100/100'</span>,</span></div>
+            <div class="code-line"><span class="code-num">4</span><span>&nbsp;&nbsp;seo: <span class="code-str">'optimized'</span>,</span></div>
+            <div class="code-line"><span class="code-num">5</span><span>&nbsp;&nbsp;design: <span class="code-str">'stunning'</span>,</span></div>
+            <div class="code-line"><span class="code-num">6</span><span>&nbsp;&nbsp;security: <span class="code-str">'bulletproof'</span>,</span></div>
+            <div class="code-line"><span class="code-num">7</span><span>&nbsp;&nbsp;quality: <span class="code-str">'cooked to perfection'</span></span></div>
+            <div class="code-line"><span class="code-num">8</span><span>};</span></div>
+            <div class="code-line"><span class="code-num">9</span><span>&nbsp;</span></div>
+            <div class="code-line"><span class="code-num">10</span><span><span class="code-keyword">export default</span> <span class="code-func">website</span>;</span></div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div style="position:absolute;top:-20px;right:-20px;background:linear-gradient(135deg,#F4D35E,#EE964B);border-radius:10px;padding:0.75rem 1rem;box-shadow:0 8px 32px rgba(238,150,75,0.4);color:#0D3B66;font-family:'Roboto Condensed',sans-serif;font-weight:700;font-size:0.78rem;letter-spacing:0.06em;">
+          ⚡ 100 PageSpeed
+        </div>
+        <div style="position:absolute;bottom:-15px;left:-15px;background:rgba(13,59,102,0.9);border:1px solid rgba(244,211,94,0.25);border-radius:10px;padding:0.75rem 1rem;backdrop-filter:blur(10px);color:rgba(250,240,202,0.9);font-family:'Roboto Condensed',sans-serif;font-size:0.78rem;">
+          🔒 SSL Secured
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ ANALYTICS / STATS ══════════════════════ -->
+  <section class="analytics" aria-label="Agency statistics">
+    <div class="container">
+      <div class="analytics-grid">
+        <div class="stat-item reveal">
+          <span class="stat-number" data-target="48" data-suffix="+">0+</span>
+          <span class="stat-label">Projects Delivered</span>
+        </div>
+        <div class="stat-item reveal delay-1">
+          <span class="stat-number" data-target="100" data-suffix="%">0%</span>
+          <span class="stat-label">Client Satisfaction</span>
+        </div>
+        <div class="stat-item reveal delay-2">
+          <span class="stat-number" data-target="4.9" data-suffix="★">0★</span>
+          <span class="stat-label">Average Rating</span>
+        </div>
+        <div class="stat-item reveal delay-3">
+          <span class="stat-number" data-target="3" data-suffix="x">0x</span>
+          <span class="stat-label">Average Traffic Growth</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════ SERVICES ═══════════════════════════ -->
+  <section class="section-pad" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-label">What We Do</p>
+        <h2 class="section-title" id="services-heading">Services Built to<br><span class="grad-text">Perform & Convert</span></h2>
+        <p class="section-sub">Every service we offer is tailored to help local businesses compete in the digital world — no fluff, just results.</p>
+      </div>
+
+      <div class="services-grid" style="margin-top:3rem;">
+        <div class="service-card reveal delay-1">
+          <div class="service-icon">🌐</div>
+          <h3 class="service-title">Website Development</h3>
+          <p class="service-desc">Custom-built websites that are fast, beautiful, and designed to convert visitors into loyal customers. From landing pages to full e-commerce stores.</p>
+          <a href="pages/pricing.html" class="btn-ghost">See Packages →</a>
+        </div>
+        <div class="service-card reveal delay-2">
+          <div class="service-icon">⚡</div>
+          <h3 class="service-title">Speed Optimization</h3>
+          <p class="service-desc">Slow websites lose customers. We conduct deep performance audits and implement proven techniques to hit 90+ PageSpeed scores consistently.</p>
+          <a href="pages/pricing.html" class="btn-ghost">See Packages →</a>
+        </div>
+        <div class="service-card reveal delay-3">
+          <div class="service-icon">🔍</div>
+          <h3 class="service-title">SEO</h3>
+          <p class="service-desc">Get found by customers who are actively searching for you. Our SEO strategies cover on-page, technical, and local search to drive organic growth.</p>
+          <a href="pages/pricing.html" class="btn-ghost">See Packages →</a>
+        </div>
+        <div class="service-card reveal delay-1">
+          <div class="service-icon">🔒</div>
+          <h3 class="service-title">Cybersecurity</h3>
+          <p class="service-desc">Protect your business and your customers. We implement SSL, firewalls, malware scanning, and vulnerability assessments to keep your site safe 24/7.</p>
+          <a href="pages/pricing.html" class="btn-ghost">See Packages →</a>
+        </div>
+        <div class="service-card reveal delay-2">
+          <div class="service-icon">🛡️</div>
+          <h3 class="service-title">Web Care Packages</h3>
+          <p class="service-desc">Monthly maintenance, content updates, uptime monitoring, and priority support — so you can focus on running your business while we handle the tech.</p>
+          <a href="pages/pricing.html" class="btn-ghost">See Packages →</a>
+        </div>
+        <div class="service-card reveal delay-3" style="background:linear-gradient(135deg,var(--navy),#1a5276);border-color:rgba(244,211,94,0.2);">
+          <div class="service-icon" style="background:rgba(244,211,94,0.15);">✦</div>
+          <h3 class="service-title" style="color:var(--cream);">Custom Solutions</h3>
+          <p class="service-desc" style="color:rgba(250,240,202,0.7);">Have a unique need? We love a challenge. Booking systems, client portals, inventory management — let's build it together.</p>
+          <a href="pages/contact.html" class="btn-ghost" style="color:var(--yellow);">Talk to Us →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════ WHY CHOOSE US ══════════════════════════ -->
+  <section class="section-pad why-section" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="why-grid">
+        <div>
+          <div class="reveal">
+            <p class="section-label">Why Devistic</p>
+            <h2 class="section-title" id="why-heading">We Don't Just Build Websites. We Build<br><span class="grad-text">Growth Engines.</span></h2>
+          </div>
+          <div class="why-list">
+            <div class="why-item reveal delay-1">
+              <div class="why-icon">🎯</div>
+              <div class="why-text">
+                <h4>Results-First Mindset</h4>
+                <p>Every design decision is driven by data and conversion goals — not just aesthetics. Your business growth is our north star.</p>
+              </div>
+            </div>
+            <div class="why-item reveal delay-2">
+              <div class="why-icon">⚙️</div>
+              <div class="why-text">
+                <h4>Clean, Scalable Code</h4>
+                <p>We write code that's maintainable, fast, and built to scale alongside your business — no messy shortcuts.</p>
+              </div>
+            </div>
+            <div class="why-item reveal delay-3">
+              <div class="why-icon">📞</div>
+              <div class="why-text">
+                <h4>Ongoing Support</h4>
+                <p>We're in your corner long after launch day. Quick responses, proactive updates, and dedicated care packages.</p>
+              </div>
+            </div>
+            <div class="why-item reveal delay-4">
+              <div class="why-icon">💰</div>
+              <div class="why-text">
+                <h4>Transparent Pricing</h4>
+                <p>No hidden fees or surprise invoices. Clear packages designed for businesses of every size and budget.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="why-visual reveal from-right">
+          <div class="why-card-stack">
+            <div class="wc wc-1">
+              <div class="wc-badge">⚡ Speed</div>
+              <h5>PageSpeed Score</h5>
+              <p style="font-size:2rem;font-family:'Oswald',sans-serif;font-weight:700;color:var(--orange);">98</p>
+              <p>Mobile performance</p>
+            </div>
+            <div class="wc wc-2">
+              <div class="wc-badge">🔍 SEO</div>
+              <h5>Organic Traffic</h5>
+              <p style="font-size:2rem;font-family:'Oswald',sans-serif;font-weight:700;color:var(--orange);">+312%</p>
+              <p>In 6 months post-launch</p>
+            </div>
+            <div class="wc wc-3">
+              <div class="wc-badge">🔒 Security</div>
+              <h5>Uptime Guarantee</h5>
+              <p style="font-size:2rem;font-family:'Oswald',sans-serif;font-weight:700;color:var(--orange);">99.9%</p>
+              <p>Monitored 24/7</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ TESTIMONIALS ════════════════════════════ -->
+  <section class="section-pad" aria-labelledby="testimonials-heading">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+        <p class="section-label" style="justify-content:center;">Client Love</p>
+        <h2 class="section-title" id="testimonials-heading" style="text-align:center;">What Our Clients Say</h2>
+        <p class="section-sub" style="margin:0 auto;">Real feedback from real business owners who've seen real results.</p>
+      </div>
+
+      <div class="testimonials-track">
+        <div class="testi-card reveal delay-1">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Devistic completely transformed our salon's online presence. Bookings went up 40% in the first month after launch. Absolutely blown away by the quality."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">ZA</div>
+            <div>
+              <div class="testi-name">Zara Ahmed</div>
+              <div class="testi-role">Owner, Glow Beauty Studio</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal delay-2">
+          <div class="testi-stars">★★★★½</div>
+          <p class="testi-quote">"Professional, responsive, and delivered ahead of schedule. Our barbershop website looks like something out of a design magazine. Worth every penny."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">KO</div>
+            <div>
+              <div class="testi-name">Kofi Osei</div>
+              <div class="testi-role">Owner, Elite Cuts Barbershop</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal delay-3">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"The SEO work Devistic did pushed us to the first page of Google in under 3 months. New clients are finding us every day now. This team is the real deal."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">LM</div>
+            <div>
+              <div class="testi-name">Layla Musa</div>
+              <div class="testi-role">Owner, The Nail Lounge</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal delay-1">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Our old site was embarrassing. Devistic rebuilt it from scratch in record time and it's stunning. The speed is incredible — loads in under a second."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">FJ</div>
+            <div>
+              <div class="testi-name">Fatima Javed</div>
+              <div class="testi-role">Owner, Luxe Hair & Spa</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal delay-2">
+          <div class="testi-stars">★★★★½</div>
+          <p class="testi-quote">"The Web Care package gives me total peace of mind. They handle updates, backups, and security — I never have to think about the website. It just works."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">MT</div>
+            <div>
+              <div class="testi-name">Marcus Thompson</div>
+              <div class="testi-role">Owner, Prestige Barbers</div>
+            </div>
+          </div>
+        </div>
+        <div class="testi-card reveal delay-3">
+          <div class="testi-stars">★★★★★</div>
+          <p class="testi-quote">"Devistic understood our brand instantly. The animations, the colors, the layout — it all screams luxury while keeping things accessible. Clients love it."</p>
+          <div class="testi-author">
+            <div class="testi-avatar">IN</div>
+            <div>
+              <div class="testi-name">Isha Noor</div>
+              <div class="testi-role">Owner, Blossom Beauty Bar</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ FAQ ═════════════════════════════════ -->
+  <section class="section-pad faq-section" aria-labelledby="faq-heading">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:3rem;">
+        <p class="section-label" style="justify-content:center;">Got Questions?</p>
+        <h2 class="section-title" id="faq-heading" style="text-align:center;">Frequently Asked Questions</h2>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal delay-1">
+          <div class="faq-q">How long does it take to build a website? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Most standard business websites take between 1–3 weeks depending on complexity. A simple landing page can be done in 5–7 days, while a full multi-page site with custom features typically takes 2–4 weeks. We always agree on a timeline upfront so there are no surprises.</p></div>
+        </div>
+        <div class="faq-item reveal delay-2">
+          <div class="faq-q">Do you work with businesses outside of your local area? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Absolutely. While we specialize in helping local businesses, we work with clients worldwide. All our communication and project management is done remotely via video calls, messaging, and project management tools — it's completely seamless.</p></div>
+        </div>
+        <div class="faq-item reveal delay-3">
+          <div class="faq-q">What do I need to get started? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Just reach out via our Contact page! We'll schedule a free discovery call to understand your goals, budget, and vision. From there, we'll send over a tailored proposal. You don't need to have any technical knowledge — that's what we're here for.</p></div>
+        </div>
+        <div class="faq-item reveal delay-1">
+          <div class="faq-q">Will my website work on mobile phones? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Every website we build is fully responsive and optimized for mobile devices. With over 60% of web traffic coming from phones, mobile-first design is non-negotiable for us. We test across multiple devices and screen sizes before every launch.</p></div>
+        </div>
+        <div class="faq-item reveal delay-2">
+          <div class="faq-q">What's included in the Web Care monthly package? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Our Web Care package includes monthly content updates, plugin/software updates, security monitoring, automated backups, uptime monitoring, and priority email support. It's essentially having us on your team to handle everything technical so you can focus on your business.</p></div>
+        </div>
+        <div class="faq-item reveal delay-3">
+          <div class="faq-q">Do you offer payment plans? <span class="faq-icon">+</span></div>
+          <div class="faq-a"><p>Yes! We offer flexible payment options including split payments for larger projects (typically 50% upfront, 50% on delivery). We understand that budget is a real consideration for local businesses and we're always happy to find an arrangement that works for both parties.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════ CTA BANNER ══════════════════════════════ -->
+  <section class="cta-banner" aria-label="Call to action">
+    <div class="container">
+      <div class="cta-banner-content reveal">
+        <p class="section-label" style="justify-content:center;color:var(--yellow);">Ready to Grow?</p>
+        <h2>Let's Cook Something<br><span class="grad-text">Extraordinary.</span></h2>
+        <p>Your business deserves a website that works as hard as you do. Let's build it together.</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="pages/contact.html" class="btn btn-primary">Start Your Project</a>
+          <a href="pages/pricing.html" class="btn btn-outline" style="color:rgba(250,240,202,0.85);border-color:rgba(250,240,202,0.3);">View Pricing</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════ FOOTER ══════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Devistic<span class="cursor" aria-hidden="true"></span></div>
+          <p>A cutting-edge web agency helping local businesses thrive in the digital age. From parlors to premium brands — cooked to perfection.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Twitter/X">🐦</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="pages/about.html">About Us</a></li>
+            <li><a href="pages/portfolio.html">Portfolio</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+            <li><a href="pages/blog.html">Blog</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="pages/pricing.html">Web Development</a></li>
+            <li><a href="pages/pricing.html">Speed Optimization</a></li>
+            <li><a href="pages/pricing.html">SEO</a></li>
+            <li><a href="pages/pricing.html">Cybersecurity</a></li>
+            <li><a href="pages/pricing.html">Web Care</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@devistic.agency">hello@devistic.agency</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="#">123 Digital Street</a></li>
+            <li><a href="pages/contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Devistic. All rights reserved.</p>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll to Top -->
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
+
+  <script src="main.js"></script>
+</body>
+</html>
