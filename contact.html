@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Contact Devistic — reach out to start your web development project, get a free quote, or ask any questions. We respond within 24 hours." />
+  <meta name="keywords" content="contact Devistic, web development quote, web agency contact, hire web developer" />
+  <title>Contact Us — Devistic</title>
+  <link rel="canonical" href="https://devistic.agency/contact" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-name">Devistic</span><span class="cursor"></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="theme-toggle-wrap">
+          <span class="theme-icon">☀️</span>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme"></button>
+          <span class="theme-icon">🌙</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="font-size:0.78rem;padding:0.6rem 1.2rem;">Get a Quote</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="reveal">
+        <p class="section-label">Let's Connect</p>
+        <h1>Get in Touch.<br><span class="grad-text">Let's Build Something.</span></h1>
+        <p>Have a project in mind? Want a free quote? Just want to say hi? We'd love to hear from you — we respond within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Form -->
+        <div class="reveal from-left">
+          <p class="section-label">Send a Message</p>
+          <h2 class="section-title" style="font-size:1.75rem;margin-bottom:2rem;">Tell Us About<br>Your Project</h2>
+          <form class="contact-form" id="contact-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first_name" placeholder="John" required autocomplete="given-name" />
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last_name" placeholder="Smith" required autocomplete="family-name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="john@yourbusiness.com" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number <span style="color:var(--text-3);font-weight:400;">(optional)</span></label>
+              <input type="tel" id="phone" name="phone" placeholder="+1 (234) 567-890" autocomplete="tel" />
+            </div>
+            <div class="form-group">
+              <label for="business">Business Name</label>
+              <input type="text" id="business" name="business" placeholder="Your Business Name" />
+            </div>
+            <div class="form-group">
+              <label for="service">Service Interested In</label>
+              <select id="service" name="service" style="background:var(--card-bg);border:1px solid var(--border);border-radius:6px;padding:0.85rem 1rem;font-family:var(--font-body);font-size:0.93rem;color:var(--text-1);outline:none;width:100%;appearance:none;cursor:pointer;transition:border-color 0.2s,box-shadow 0.2s;">
+                <option value="">Select a service…</option>
+                <option>Website Development — Starter ($499)</option>
+                <option>Website Development — Pro ($999)</option>
+                <option>Website Development — Elite ($1,999)</option>
+                <option>Speed Optimization ($149)</option>
+                <option>SEO Package ($299)</option>
+                <option>Cybersecurity Suite ($199)</option>
+                <option>Web Care — Basic ($49/mo)</option>
+                <option>Web Care — Growth ($99/mo)</option>
+                <option>Web Care — Premium ($199/mo)</option>
+                <option>Not sure — need advice</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="budget">Approximate Budget</label>
+              <select id="budget" name="budget" style="background:var(--card-bg);border:1px solid var(--border);border-radius:6px;padding:0.85rem 1rem;font-family:var(--font-body);font-size:0.93rem;color:var(--text-1);outline:none;width:100%;appearance:none;cursor:pointer;">
+                <option value="">Select a budget range…</option>
+                <option>Under $500</option>
+                <option>$500 – $1,000</option>
+                <option>$1,000 – $2,500</option>
+                <option>$2,500 – $5,000</option>
+                <option>$5,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Your Message</label>
+              <textarea id="message" name="message" placeholder="Tell us about your business, what you need, your timeline, and any questions you have. The more detail the better!" required></textarea>
+            </div>
+            <div style="display:flex;align-items:flex-start;gap:0.75rem;">
+              <input type="checkbox" id="consent" name="consent" required style="margin-top:3px;accent-color:var(--orange);width:16px;height:16px;flex-shrink:0;">
+              <label for="consent" style="font-size:0.82rem;color:var(--text-2);cursor:pointer;">I agree to be contacted by Devistic regarding my inquiry. I understand my information will not be shared with third parties.</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;padding:1rem;font-size:0.95rem;">
+              Send Message ↗
+            </button>
+          </form>
+        </div>
+
+        <!-- Info -->
+        <div class="reveal from-right">
+          <p class="section-label">Contact Details</p>
+          <h2 class="section-title" style="font-size:1.75rem;margin-bottom:2rem;">Other Ways to<br>Reach Us</h2>
+
+          <div class="contact-info">
+            <div class="info-card">
+              <div class="info-icon">📧</div>
+              <div>
+                <h4>Email Us</h4>
+                <p><a href="mailto:hello@devistic.agency" style="color:var(--orange);">hello@devistic.agency</a></p>
+                <p style="font-size:0.8rem;margin-top:0.25rem;">We respond within 24 hours on business days.</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">📞</div>
+              <div>
+                <h4>Call Us</h4>
+                <p><a href="tel:+1234567890" style="color:var(--orange);">+1 (234) 567-890</a></p>
+                <p style="font-size:0.8rem;margin-top:0.25rem;">Mon – Fri, 9am – 6pm local time.</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">💬</div>
+              <div>
+                <h4>WhatsApp</h4>
+                <p><a href="https://wa.me/1234567890" style="color:var(--orange);" target="_blank" rel="noopener">Chat on WhatsApp</a></p>
+                <p style="font-size:0.8rem;margin-top:0.25rem;">Quick questions? We're responsive on WhatsApp.</p>
+              </div>
+            </div>
+
+            <div class="info-card">
+              <div class="info-icon">📍</div>
+              <div>
+                <h4>Our Location</h4>
+                <p>123 Digital Street, Tech District</p>
+                <p style="font-size:0.8rem;margin-top:0.25rem;">Available remotely worldwide.</p>
+              </div>
+            </div>
+
+            <!-- Map Placeholder -->
+            <div class="map-placeholder">
+              <span>🗺️</span>
+              <span>Interactive Map</span>
+              <span style="color:var(--text-3);font-size:0.72rem;">Embed your Google Maps iframe here</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section class="section-pad" style="background:var(--bg-alt);">
+    <div class="container">
+      <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
+        <p class="section-label" style="justify-content:center;">What Happens Next</p>
+        <h2 class="section-title" style="text-align:center;">Our Process</h2>
+        <p class="section-sub" style="margin:0 auto;">From first contact to final launch — here's exactly how working with Devistic looks.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem;position:relative;" class="process-grid">
+        <!-- Connector line -->
+        <div style="position:absolute;top:2.5rem;left:12%;right:12%;height:2px;background:linear-gradient(90deg,var(--orange),var(--yellow),var(--orange));opacity:0.3;" aria-hidden="true"></div>
+
+        <div class="card reveal delay-1" style="text-align:center;position:relative;">
+          <div style="width:50px;height:50px;border-radius:50%;background:var(--grad-warm);background-size:200%;animation:gradShift 4s ease infinite;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1.2rem;color:#fff;margin:0 auto 1.25rem;">1</div>
+          <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:0.5rem;color:var(--text-1);">Discovery Call</h4>
+          <p style="font-size:0.84rem;color:var(--text-2);">Free 20-min call to understand your goals, audience, and vision.</p>
+        </div>
+        <div class="card reveal delay-2" style="text-align:center;">
+          <div style="width:50px;height:50px;border-radius:50%;background:var(--grad-warm);background-size:200%;animation:gradShift 4s ease infinite;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1.2rem;color:#fff;margin:0 auto 1.25rem;">2</div>
+          <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:0.5rem;color:var(--text-1);">Proposal</h4>
+          <p style="font-size:0.84rem;color:var(--text-2);">Custom proposal with timeline, scope, and transparent pricing within 48 hours.</p>
+        </div>
+        <div class="card reveal delay-3" style="text-align:center;">
+          <div style="width:50px;height:50px;border-radius:50%;background:var(--grad-warm);background-size:200%;animation:gradShift 4s ease infinite;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1.2rem;color:#fff;margin:0 auto 1.25rem;">3</div>
+          <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:0.5rem;color:var(--text-1);">Design & Build</h4>
+          <p style="font-size:0.84rem;color:var(--text-2);">We design, develop, and keep you updated at every milestone.</p>
+        </div>
+        <div class="card reveal delay-4" style="text-align:center;">
+          <div style="width:50px;height:50px;border-radius:50%;background:var(--grad-warm);background-size:200%;animation:gradShift 4s ease infinite;display:flex;align-items:center;justify-content:center;font-family:var(--font-display);font-weight:700;font-size:1.2rem;color:#fff;margin:0 auto 1.25rem;">4</div>
+          <h4 style="font-family:var(--font-display);font-size:1rem;font-weight:600;margin-bottom:0.5rem;color:var(--text-1);">Launch & Support</h4>
+          <p style="font-size:0.84rem;color:var(--text-2);">We launch, train you on the CMS, and support you post-launch.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Signals -->
+  <section class="section-pad">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;text-align:center;" class="trust-grid">
+        <div class="reveal delay-1">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem;">⚡</div>
+          <h4 style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--text-1);margin-bottom:0.4rem;">Fast Response</h4>
+          <p style="font-size:0.87rem;color:var(--text-2);">We reply to all enquiries within 24 hours — usually much faster.</p>
+        </div>
+        <div class="reveal delay-2">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem;">🤝</div>
+          <h4 style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--text-1);margin-bottom:0.4rem;">Free Discovery Call</h4>
+          <p style="font-size:0.87rem;color:var(--text-2);">No commitment, no pressure. Just a genuine conversation about your needs.</p>
+        </div>
+        <div class="reveal delay-3">
+          <div style="font-size:2.5rem;margin-bottom:0.75rem;">💯</div>
+          <h4 style="font-family:var(--font-display);font-size:1.1rem;font-weight:600;color:var(--text-1);margin-bottom:0.4rem;">Satisfaction Guarantee</h4>
+          <p style="font-size:0.87rem;color:var(--text-2);">We don't consider the job done until you're genuinely happy with the result.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Devistic<span class="cursor"></span></div>
+          <p>Cooked to perfection — web solutions for businesses that refuse to blend in.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="pricing.html">Web Development</a></li>
+            <li><a href="pricing.html">Speed Optimization</a></li>
+            <li><a href="pricing.html">SEO</a></li>
+            <li><a href="pricing.html">Cybersecurity</a></li>
+            <li><a href="pricing.html">Web Care</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@devistic.agency">hello@devistic.agency</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Devistic. All rights reserved.</p>
+        <div style="display:flex;gap:1.5rem;"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
+  <script src="main.js"></script>
+</body>
+</html>
