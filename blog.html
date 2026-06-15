@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="The Devistic Blog — expert articles on web development, SEO, speed optimization, cybersecurity, and digital growth for local businesses." />
+  <meta name="keywords" content="web development blog, SEO tips, website speed, cybersecurity, local business digital marketing, Devistic blog" />
+  <title>Blog — Devistic</title>
+  <link rel="canonical" href="https://devistic.agency/blog" />
+  <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-name">Devistic</span><span class="cursor"></span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="blog.html" class="active">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-actions">
+        <div class="theme-toggle-wrap">
+          <span class="theme-icon">☀️</span>
+          <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme"></button>
+          <span class="theme-icon">🌙</span>
+        </div>
+        <a href="contact.html" class="btn btn-primary" style="font-size:0.78rem;padding:0.6rem 1.2rem;">Get a Quote</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="container page-hero-content">
+      <div class="reveal">
+        <p class="section-label">Insights & Ideas</p>
+        <h1>The Devistic<br><span class="grad-text">Blog</span></h1>
+        <p>Practical advice on web development, SEO, security, and digital growth — written for business owners, not tech nerds.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Post -->
+  <section class="section-pad">
+    <div class="container">
+      <div class="reveal" style="margin-bottom:3rem;">
+        <p class="section-label">Featured Article</p>
+      </div>
+      <div class="card reveal" style="display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;padding:0;overflow:hidden;border-radius:16px;">
+        <div style="height:320px;background:linear-gradient(135deg,#0D3B66,#1a5276,#EE964B);display:flex;align-items:center;justify-content:center;font-size:5rem;position:relative;">
+          🚀
+          <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(13,59,102,0.6),transparent);"></div>
+        </div>
+        <div style="padding:2.5rem 2.5rem 2.5rem 0;">
+          <div style="display:flex;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap;">
+            <span class="blog-tag">Web Development</span>
+            <span style="font-family:var(--font-ui);font-size:0.72rem;color:var(--text-3);">Dec 14, 2025 · 8 min read</span>
+          </div>
+          <h2 style="font-family:var(--font-display);font-size:1.6rem;font-weight:700;color:var(--text-1);line-height:1.25;margin-bottom:1rem;">Why Your Local Business Loses Customers Every Day Without a Proper Website</h2>
+          <p style="font-size:0.93rem;color:var(--text-2);line-height:1.75;margin-bottom:1.5rem;">97% of people research businesses online before visiting in person. If your website is slow, outdated, or non-existent, you're handing customers to your competitors — every single day. Here's exactly what to fix and how.</p>
+          <a href="#" class="btn btn-primary">Read Article →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Category Filter -->
+  <section style="padding:0 0 2rem;">
+    <div class="container">
+      <div class="reveal" style="display:flex;gap:0.5rem;flex-wrap:wrap;align-items:center;">
+        <span style="font-family:var(--font-ui);font-size:0.78rem;font-weight:700;color:var(--text-3);letter-spacing:0.08em;text-transform:uppercase;margin-right:0.5rem;">Filter:</span>
+        <button class="btn btn-primary" style="padding:0.4rem 1rem;font-size:0.75rem;" onclick="filterBlog('all',this)">All</button>
+        <button class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.75rem;" onclick="filterBlog('web-dev',this)">Web Dev</button>
+        <button class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.75rem;" onclick="filterBlog('seo',this)">SEO</button>
+        <button class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.75rem;" onclick="filterBlog('speed',this)">Performance</button>
+        <button class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.75rem;" onclick="filterBlog('security',this)">Security</button>
+        <button class="btn btn-outline" style="padding:0.4rem 1rem;font-size:0.75rem;" onclick="filterBlog('business',this)">Business Growth</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section style="padding:0 0 6rem;">
+    <div class="container">
+      <div class="blog-grid" id="blog-grid">
+
+        <article class="blog-card reveal delay-1" data-cat="seo">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#0d3b66,#1a5276);">🔍</div>
+          <div class="blog-body">
+            <span class="blog-tag">SEO</span>
+            <h3 class="blog-title">10 Local SEO Tricks That Get Salons to the Top of Google</h3>
+            <p class="blog-excerpt">Your Google Business Profile is either your biggest asset or your biggest missed opportunity. Here are the 10 changes that consistently move local businesses to page one.</p>
+            <div class="blog-meta">
+              <span>Dec 10, 2025</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal delay-2" data-cat="speed">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#F4D35E,#EE964B,#F95738);">⚡</div>
+          <div class="blog-body">
+            <span class="blog-tag">Performance</span>
+            <h3 class="blog-title">The 5-Second Rule: How Page Speed is Killing Your Bookings</h3>
+            <p class="blog-excerpt">Every second your page takes to load, you lose 7% of conversions. We break down exactly why your site might be slow and the quickest fixes that actually work.</p>
+            <div class="blog-meta">
+              <span>Dec 5, 2025</span>
+              <span>5 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal delay-3" data-cat="security">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#1a3a5c,#0d3b66);">🔒</div>
+          <div class="blog-body">
+            <span class="blog-tag">Security</span>
+            <h3 class="blog-title">Is Your Salon Website Putting Client Data at Risk?</h3>
+            <p class="blog-excerpt">Small business websites are hacked more than you think — because hackers know they're easy targets. This checklist tells you if you're vulnerable right now.</p>
+            <div class="blog-meta">
+              <span>Nov 28, 2025</span>
+              <span>7 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal delay-1" data-cat="web-dev">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#0d3b66,#EE964B);">🌐</div>
+          <div class="blog-body">
+            <span class="blog-tag">Web Development</span>
+            <h3 class="blog-title">WordPress vs Custom Code: What's Right for Your Business?</h3>
+            <p class="blog-excerpt">There's no universal answer — it depends on your goals, budget, and how fast you need to scale. We break down the honest pros and cons of both approaches.</p>
+            <div class="blog-meta">
+              <span>Nov 20, 2025</span>
+              <span>9 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal delay-2" data-cat="business">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#F95738,#EE964B);">📈</div>
+          <div class="blog-body">
+            <span class="blog-tag">Business Growth</span>
+            <h3 class="blog-title">How Online Booking Systems Increased One Salon's Revenue by 60%</h3>
+            <p class="blog-excerpt">A case study on Glow Beauty Studio — how swapping a phone-only booking system for an online one changed everything. The numbers will surprise you.</p>
+            <div class="blog-meta">
+              <span>Nov 14, 2025</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal delay-3" data-cat="seo">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#1a5276,#0d3b66,#F4D35E);">📍</div>
+          <div class="blog-body">
+            <span class="blog-tag">SEO</span>
+            <h3 class="blog-title">Google Business Profile: The Complete Setup Guide for 2025</h3>
+            <p class="blog-excerpt">Your free Google listing is the single most important local marketing tool you have. This step-by-step guide helps you set it up the right way — from scratch.</p>
+            <div class="blog-meta">
+              <span>Nov 8, 2025</span>
+              <span>10 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal delay-1" data-cat="web-dev">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#0d3b66,#1a3a5c);">📱</div>
+          <div class="blog-body">
+            <span class="blog-tag">Web Development</span>
+            <h3 class="blog-title">Mobile-First Design: Why 60% of Your Customers Judge Your Brand on a Phone</h3>
+            <p class="blog-excerpt">A website that doesn't work perfectly on mobile is like a shop with a broken front door. Here's what mobile-first truly means and why it matters so much right now.</p>
+            <div class="blog-meta">
+              <span>Oct 30, 2025</span>
+              <span>6 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal delay-2" data-cat="business">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#EE964B,#F4D35E);">💰</div>
+          <div class="blog-body">
+            <span class="blog-tag">Business Growth</span>
+            <h3 class="blog-title">5 Website Mistakes Costing Local Businesses Thousands of Dollars</h3>
+            <p class="blog-excerpt">From broken contact forms to missing location info, these are the most common — and most costly — website mistakes we see when onboarding new clients.</p>
+            <div class="blog-meta">
+              <span>Oct 22, 2025</span>
+              <span>7 min read</span>
+            </div>
+          </div>
+        </article>
+
+        <article class="blog-card reveal delay-3" data-cat="speed">
+          <div class="blog-thumb" style="background:linear-gradient(135deg,#F95738,#0d3b66);">🏎️</div>
+          <div class="blog-body">
+            <span class="blog-tag">Performance</span>
+            <h3 class="blog-title">Core Web Vitals Explained: What Google Actually Measures (And Why You Should Care)</h3>
+            <p class="blog-excerpt">LCP, FID, CLS — these aren't just acronyms. They're the scores Google uses to rank your site. Here's what each one means and the fastest way to improve them.</p>
+            <div class="blog-meta">
+              <span>Oct 15, 2025</span>
+              <span>8 min read</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Load More -->
+      <div style="text-align:center;margin-top:3rem;" class="reveal">
+        <button class="btn btn-outline" style="padding:0.85rem 2.5rem;" onclick="this.textContent='No more posts to load';this.disabled=true;this.style.opacity='0.5';">Load More Articles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter -->
+  <section style="background:var(--bg-alt);padding:5rem 0;">
+    <div class="container">
+      <div class="card reveal" style="text-align:center;max-width:600px;margin:0 auto;padding:3rem;">
+        <div style="font-size:2.5rem;margin-bottom:1rem;">📬</div>
+        <h2 style="font-family:var(--font-display);font-size:1.75rem;font-weight:700;color:var(--text-1);margin-bottom:0.75rem;">Stay in the Loop</h2>
+        <p style="color:var(--text-2);font-size:0.93rem;margin-bottom:2rem;">Get our best articles on web development, SEO, and business growth — straight to your inbox. No spam, ever.</p>
+        <div style="display:flex;gap:0.75rem;max-width:420px;margin:0 auto;flex-wrap:wrap;">
+          <input type="email" placeholder="Your email address" style="flex:1;min-width:200px;background:var(--bg);border:1px solid var(--border);border-radius:6px;padding:0.85rem 1rem;font-family:var(--font-body);font-size:0.93rem;color:var(--text-1);outline:none;">
+          <button class="btn btn-primary" onclick="this.textContent='Subscribed ✓';this.disabled=true;">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <div class="cta-banner-content reveal">
+        <h2>Ready to Put These<br><span class="grad-text">Ideas Into Action?</span></h2>
+        <p>Let Devistic handle the technical side while you focus on running your business.</p>
+        <a href="contact.html" class="btn btn-primary">Work With Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">Devistic<span class="cursor"></span></div>
+          <p>Cooked to perfection — web solutions for businesses that refuse to blend in.</p>
+          <div class="social-links">
+            <a href="#" class="social-link" aria-label="Instagram">📸</a>
+            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
+            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
+            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Popular Posts</h4>
+          <ul>
+            <li><a href="#">Local SEO for Salons</a></li>
+            <li><a href="#">Page Speed Guide</a></li>
+            <li><a href="#">Security Checklist</a></li>
+            <li><a href="#">Booking Systems</a></li>
+            <li><a href="#">Core Web Vitals</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="mailto:hello@devistic.agency">hello@devistic.agency</a></li>
+            <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
+            <li><a href="contact.html">Send a Message</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Devistic. All rights reserved.</p>
+        <div style="display:flex;gap:1.5rem;"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="scroll-top" aria-label="Scroll to top">↑</button>
+  <script src="main.js"></script>
+  <script>
+    function filterBlog(cat, btn) {
+      document.querySelectorAll('#blog-grid .blog-card').forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+      });
+      document.querySelectorAll('section button').forEach(b => {
+        b.className = b === btn ? 'btn btn-primary' : 'btn btn-outline';
+        b.style.padding = '0.4rem 1rem';
+        b.style.fontSize = '0.75rem';
+      });
+    }
+  </script>
+</body>
+</html>
