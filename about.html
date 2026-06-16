@@ -3,21 +3,244 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Meet the team behind Devistic — a passionate group of young web developers on a mission to help local businesses thrive online." />
+  <meta name="description" content="Meet the team behind Devistic — a small studio of ambitious young developers building modern, fast websites for businesses that refuse to blend in." />
   <meta name="keywords" content="Devistic team, Henry Benjamin, web development agency, about us" />
   <title>About Us — Devistic</title>
   <link rel="canonical" href="https://devistic.agency/about" />
   <link rel="icon" href="../assets/icons/favicon.svg" type="image/svg+xml" />
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
+  <style>
+    .about-hero {
+      padding-top: clamp(5rem, 10vw, 8rem);
+      padding-bottom: clamp(3rem, 6vw, 5rem);
+      overflow: hidden;
+      background: var(--bg);
+    }
+    .about-hero-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: clamp(2.5rem, 5vw, 5rem);
+      align-items: center;
+    }
+    .about-photo { position: relative; }
+    .photo-frame {
+      position: relative;
+      border-radius: 18px;
+      padding: 3px;
+      background: linear-gradient(135deg, var(--red), var(--orange), var(--yellow), var(--red));
+      background-size: 300% 300%;
+      animation: gradShift 8s ease infinite;
+      box-shadow: 0 24px 64px rgba(13,59,102,0.2);
+    }
+    .photo-frame-inner {
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--navy);
+      aspect-ratio: 4 / 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .photo-frame-inner svg { width: 100%; height: 100%; display: block; }
+    .founder-stamp {
+      position: absolute;
+      bottom: 1.8rem;
+      left: -0.5rem;
+      background: var(--bg);
+      border: 2px solid var(--orange);
+      border-radius: 8px;
+      padding: 0.4rem 1rem;
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--orange);
+      transform: rotate(-3deg);
+      box-shadow: 0 4px 16px rgba(238,150,75,0.25);
+    }
+    .about-eyebrow {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
+    }
+    .about-eyebrow::before { content: "//"; opacity: 0.55; }
+    .about-hero-grid h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 700;
+      line-height: 1.08;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+      color: var(--text-1);
+      margin-bottom: 1rem;
+    }
+    .about-hero-grid .lead {
+      font-size: 1.05rem;
+      color: var(--text-2);
+      line-height: 1.75;
+      margin-bottom: 1.5rem;
+      max-width: 520px;
+    }
+    .founder-blockquote {
+      font-family: var(--font-display);
+      font-size: clamp(1.15rem, 2.4vw, 1.65rem);
+      font-weight: 500;
+      line-height: 1.35;
+      text-transform: none;
+      letter-spacing: 0;
+      color: var(--text-1);
+      border-left: 3px solid var(--orange);
+      padding-left: 1.4rem;
+      margin: 1.75rem 0 0.75rem;
+    }
+    .founder-cite {
+      font-family: var(--font-ui);
+      font-size: 0.82rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      padding-left: 1.4rem;
+    }
+    .about-marquee {
+      overflow: hidden;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--bg-alt);
+      padding: 0.9rem 0;
+    }
+    .about-marquee-track {
+      display: flex;
+      gap: 3rem;
+      white-space: nowrap;
+      width: max-content;
+      animation: marqueeScroll 28s linear infinite;
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: clamp(0.85rem, 1.5vw, 1.15rem);
+    }
+    .about-marquee-track span { display: flex; align-items: center; gap: 0.8em; color: var(--text-2); }
+    .about-marquee-track span b { color: var(--orange); font-weight: 700; }
+    .story-section {
+      background: var(--bg-alt);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(3.5rem, 7vw, 6rem) 0;
+    }
+    .story-head { max-width: 640px; margin-bottom: clamp(2.5rem, 5vw, 4rem); }
+    .story-eyebrow {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--orange);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
+    }
+    .story-eyebrow::before { content: "//"; opacity: 0.55; }
+    .story-head h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.9rem, 4vw, 3rem);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.12;
+      color: var(--text-1);
+      margin-bottom: 0.85rem;
+    }
+    .story-head p { font-size: 1.02rem; color: var(--text-2); line-height: 1.75; }
+    .timeline { display: flex; flex-direction: column; }
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 2rem;
+      padding: 1.75rem 0;
+      border-top: 1px dashed var(--border);
+    }
+    .timeline-item:first-child { border-top: none; }
+    .timeline-year { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--orange); padding-top: 0.1rem; }
+    .timeline-item h3 { font-family: var(--font-display); font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-1); margin-bottom: 0.5rem; }
+    .timeline-item p { font-size: 0.95rem; color: var(--text-2); line-height: 1.7; margin: 0; }
+    .values-section { padding: clamp(3.5rem, 7vw, 6rem) 0; }
+    .values-head { text-align: center; max-width: 580px; margin: 0 auto clamp(2.5rem, 5vw, 4rem); }
+    .values-head h2 { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; text-transform: uppercase; letter-spacing: 0.03em; color: var(--text-1); margin-bottom: 0.5rem; }
+    .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    .value-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: clamp(1.6rem, 3vw, 2.2rem);
+      transition: transform 0.4s, border-color 0.35s, box-shadow 0.4s;
+    }
+    .value-card:hover { transform: translateY(-6px); border-color: var(--orange); box-shadow: 0 20px 48px rgba(13,59,102,0.12); }
+    .value-num { font-family: var(--font-display); font-size: 1.6rem; font-weight: 700; color: var(--orange); display: block; margin-bottom: 0.75rem; line-height: 1; }
+    .value-card h3 { font-family: var(--font-display); font-size: 1.05rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--text-1); margin-bottom: 0.55rem; }
+    .value-card p { font-size: 0.9rem; color: var(--text-2); line-height: 1.68; margin: 0; }
+    .about-cta {
+      background: var(--navy);
+      padding: clamp(3.5rem, 7vw, 5.5rem) 0;
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+    }
+    .about-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #0d3b66 0%, #1a5276 50%, #0d3b66 100%);
+      background-size: 400%;
+      animation: bgShift 10s ease infinite;
+    }
+    .about-cta-inner { position: relative; z-index: 1; }
+    .eyebrow-cta {
+      font-family: var(--font-ui);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+    .eyebrow-cta::before { content: "//"; opacity: 0.55; }
+    .about-cta h2 { font-family: var(--font-display); font-size: clamp(1.9rem, 4vw, 3rem); font-weight: 700; text-transform: uppercase; color: var(--cream); margin-bottom: 1rem; }
+    .about-cta p { color: rgba(250,240,202,0.7); font-size: 1.02rem; max-width: 480px; margin: 0 auto 2rem; }
+    .about-cta-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    @media (max-width: 900px) {
+      .about-hero-grid { grid-template-columns: 1fr; }
+      .photo-frame-inner { aspect-ratio: 16/10; max-width: 420px; margin: 0 auto; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .timeline-item { grid-template-columns: 1fr; gap: 0.5rem; }
+      .values-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
 
   <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="index.html" class="nav-logo"><span class="logo-name">Devistic</span><span class="cursor"></span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html" class="active">About Us</a></li>
+      <a href="../index.html" class="nav-logo" aria-label="Devistic home">
+        <span class="logo-name">Devistic</span><span class="cursor" aria-hidden="true"></span>
+      </a>
+      <ul class="nav-links" role="list">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html" class="active" aria-current="page">About Us</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="pricing.html">Pricing</a></li>
         <li><a href="blog.html">Blog</a></li>
@@ -25,152 +248,191 @@
       </ul>
       <div class="nav-actions">
         <div class="theme-toggle-wrap">
-          <span class="theme-icon">☀️</span>
+          <span class="theme-icon" aria-hidden="true">☀️</span>
           <button class="theme-toggle" id="theme-toggle" aria-label="Switch theme"></button>
-          <span class="theme-icon">🌙</span>
+          <span class="theme-icon" aria-hidden="true">🌙</span>
         </div>
-        <a href="contact.html" class="btn btn-primary" style="font-size:0.78rem;padding:0.6rem 1.2rem;">Get a Quote</a>
-        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+        <a href="contact.html" class="btn btn-primary" style="font-size:0.78rem;padding:0.6rem 1.2rem;">Start a project</a>
+        <button class="nav-hamburger" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </nav>
 
-  <!-- Page Hero -->
-  <section class="page-hero">
-    <div class="container page-hero-content">
+  <header class="about-hero">
+    <div class="container about-hero-grid">
+
+      <div class="about-photo reveal from-left">
+        <div class="photo-frame">
+          <div class="photo-frame-inner">
+            <svg viewBox="0 0 400 500" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="founderTitle">
+              <title id="founderTitle">Portrait of Henry Benjamin, founder of Devistic</title>
+              <defs>
+                <linearGradient id="avatarBg" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0%" stop-color="#0d3b66"/>
+                  <stop offset="100%" stop-color="#16466f"/>
+                </linearGradient>
+                <linearGradient id="skinGrad" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="0%" stop-color="#FAF0CA"/>
+                  <stop offset="100%" stop-color="#e8d5a0"/>
+                </linearGradient>
+                <linearGradient id="fadeBottom" x1="0" y1="0" x2="0" y2="1">
+                  <stop offset="70%" stop-color="transparent"/>
+                  <stop offset="100%" stop-color="#0d3b66"/>
+                </linearGradient>
+              </defs>
+              <rect width="400" height="500" fill="url(#avatarBg)"/>
+              <g opacity="0.12" stroke="#faf0ca" stroke-width="1">
+                <line x1="0" y1="80" x2="400" y2="80"/>
+                <line x1="0" y1="420" x2="400" y2="420"/>
+                <line x1="80" y1="0" x2="80" y2="500"/>
+                <line x1="320" y1="0" x2="320" y2="500"/>
+              </g>
+              <circle cx="340" cy="68" r="50" fill="#f95738" opacity="0.8"/>
+              <circle cx="340" cy="68" r="35" fill="#f95738" opacity="0.5"/>
+              <rect x="24" y="388" width="70" height="70" rx="12" fill="#f4d35e" opacity="0.8"/>
+              <rect x="36" y="400" width="46" height="46" rx="8" fill="#ee964b" opacity="0.6"/>
+              <path d="M60 500 C60 360 130 305 200 305 C270 305 340 360 340 500 Z" fill="#faf0ca"/>
+              <path d="M130 370 C130 340 165 320 200 320 C235 320 270 340 270 370 L280 500 L120 500 Z" fill="#0d3b66" opacity="0.85"/>
+              <path d="M185 322 L200 355 L215 322" fill="none" stroke="#f4d35e" stroke-width="2"/>
+              <rect x="182" y="280" width="36" height="40" rx="8" fill="#FAF0CA"/>
+              <ellipse cx="200" cy="210" rx="88" ry="95" fill="url(#skinGrad)"/>
+              <path d="M112 200 C112 130 140 100 200 100 C260 100 288 130 288 200 L280 185 C275 145 255 118 200 118 C145 118 125 145 120 185 Z" fill="#1a1a2e"/>
+              <path d="M140 130 C155 115 175 108 200 108" stroke="#3a3a5e" stroke-width="4" fill="none" stroke-linecap="round"/>
+              <ellipse cx="172" cy="205" rx="13" ry="14" fill="white"/>
+              <ellipse cx="228" cy="205" rx="13" ry="14" fill="white"/>
+              <circle cx="175" cy="207" r="8" fill="#1a1a2e"/>
+              <circle cx="231" cy="207" r="8" fill="#1a1a2e"/>
+              <circle cx="178" cy="204" r="2.5" fill="white"/>
+              <circle cx="234" cy="204" r="2.5" fill="white"/>
+              <path d="M158 190 Q172 183 186 188" stroke="#1a1a2e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M214 188 Q228 183 242 190" stroke="#1a1a2e" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+              <path d="M196 218 Q200 232 204 218" stroke="#c8a870" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M190 234 Q200 240 210 234" stroke="#c8a870" stroke-width="2" fill="none" stroke-linecap="round"/>
+              <path d="M178 255 Q200 270 222 255" stroke="#c8a870" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+              <ellipse cx="112" cy="213" rx="11" ry="16" fill="#FAF0CA"/>
+              <ellipse cx="288" cy="213" rx="11" ry="16" fill="#FAF0CA"/>
+              <text x="30" y="46" fill="#f4d35e" font-family="Courier New, monospace" font-size="16" letter-spacing="3" opacity="0.9">&lt;HB /&gt;</text>
+              <rect width="400" height="500" fill="url(#fadeBottom)"/>
+            </svg>
+          </div>
+        </div>
+        <span class="founder-stamp">Founder</span>
+      </div>
+
+      <div class="about-copy reveal from-right">
+        <span class="about-eyebrow">About Devistic</span>
+        <h1>Three friends,<br>one studio,<br><span class="grad-text">one slogan.</span></h1>
+        <p class="lead">Devistic started the way a lot of good ideas do — with a group of friends noticing a problem nobody else seemed to be solving. Businesses were doing incredible work, but their websites looked like they'd been frozen in 2012. We figured we could fix that.</p>
+        <blockquote class="founder-blockquote">
+          "We don't build websites because it's trendy — we build them because a great business deserves a website that actually represents it. Every project we ship has to be cooked to perfection, or it doesn't ship."
+        </blockquote>
+        <p class="founder-cite">— Henry Benjamin, Founder &amp; Lead Developer</p>
+      </div>
+
+    </div>
+  </header>
+
+  <div class="about-marquee" aria-hidden="true">
+    <div class="about-marquee-track">
+      <span>Cooked to <b>perfection</b></span>
+      <span>Est. by three friends</span>
+      <span>Zero shortcuts</span>
+      <span>Code &amp; care, in equal measure</span>
+      <span>Built for brands that mean business</span>
+      <span>Cooked to <b>perfection</b></span>
+      <span>Est. by three friends</span>
+      <span>Zero shortcuts</span>
+      <span>Code &amp; care, in equal measure</span>
+      <span>Built for brands that mean business</span>
+    </div>
+  </div>
+
+  <section class="story-section" aria-labelledby="story-heading">
+    <div class="container">
+      <div class="story-head reveal">
+        <span class="story-eyebrow">Our story</span>
+        <h2 id="story-heading">From side project<br>to <span class="grad-text">studio.</span></h2>
+        <p>Devistic didn't start with a business plan — it started with a laptop, a few late nights, and a client who needed help and couldn't afford a big agency.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <span class="timeline-year">2024</span>
+          <div>
+            <h3>Late nights, big idea</h3>
+            <p>What began as a hobby — building practice websites and tinkering with animations — turned into something bigger once we realized how many businesses were stuck with outdated sites that were costing them real customers.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="timeline-year">2025</span>
+          <div>
+            <h3>First client, first launch</h3>
+            <p>We rebuilt a website for a friend's business as a favour. The new site loaded faster, ranked better on Google, and started bringing in enquiries within weeks. Word spread fast from there — and so did the client list.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <span class="timeline-year">2026</span>
+          <div>
+            <h3>Devistic is born</h3>
+            <p>We formalized everything — a name, a full suite of services, and a proven process we could repeat for any business that needed a digital upgrade. SaaS tools, e-commerce brands, hospitality, real estate, and beyond.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="values-section" aria-labelledby="values-heading">
+    <div class="container">
+      <div class="values-head reveal">
+        <span class="about-eyebrow" style="justify-content:center;">What we believe</span>
+        <h2 id="values-heading">The recipe behind<br>every project.</h2>
+      </div>
+      <div class="values-grid">
+        <div class="value-card reveal delay-1">
+          <span class="value-num">01</span>
+          <h3>Craft over templates</h3>
+          <p>Every site is custom designed and coded around your brand — never a recycled template with your logo dropped in.</p>
+        </div>
+        <div class="value-card reveal delay-2">
+          <span class="value-num">02</span>
+          <h3>Speed without shortcuts</h3>
+          <p>Performance is built in from day one, not an afterthought we bolt on before launch. Every millisecond matters.</p>
+        </div>
+        <div class="value-card reveal delay-3">
+          <span class="value-num">03</span>
+          <h3>Honest partnership</h3>
+          <p>Clear pricing, plain-English updates, and a team that's genuinely invested in your business doing well.</p>
+        </div>
+        <div class="value-card reveal delay-1">
+          <span class="value-num">04</span>
+          <h3>Relentless quality</h3>
+          <p>If it doesn't meet our standard, it doesn't ship. We'd rather push a deadline than hand over work we're not proud of.</p>
+        </div>
+        <div class="value-card reveal delay-2">
+          <span class="value-num">05</span>
+          <h3>Innovation first</h3>
+          <p>We stay ahead so you don't have to. Latest tech, best practices, and forward-thinking design baked into every project.</p>
+        </div>
+        <div class="value-card reveal delay-3">
+          <span class="value-num">06</span>
+          <h3>Long-term thinking</h3>
+          <p>We build for where your business is going, not just where it is. Scalable architecture, SEO foundations, roadmaps that grow with you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-cta" aria-label="Call to action">
+    <div class="container about-cta-inner">
       <div class="reveal">
-        <p class="section-label">Our Story</p>
-        <h1>The Team Behind<br><span class="grad-text">Devistic</span></h1>
-        <p>A group of ambitious teenagers with a mission — to give every local business the digital presence it deserves.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Mission Statement -->
-  <section class="section-pad">
-    <div class="container">
-      <div class="grid-2" style="align-items:center;gap:5rem;">
-        <div class="reveal from-left">
-          <p class="section-label">Our Mission</p>
-          <h2 class="section-title">Built to Solve Real Problems for Real Businesses</h2>
-          <p style="color:var(--text-2);line-height:1.8;margin-bottom:1.5rem;">
-            We started Devistic because we kept seeing something frustrating: incredible local businesses — hair salons, barbershops, nail studios — losing customers simply because their online presence didn't reflect their real quality.
-          </p>
-          <p style="color:var(--text-2);line-height:1.8;margin-bottom:1.5rem;">
-            That's the problem we exist to solve. We bring enterprise-level web development skills and strategy to businesses that deserve them — at prices that make sense.
-          </p>
-          <p style="color:var(--text-2);line-height:1.8;">
-            "Cooked to perfection" isn't just a slogan. It's the standard we hold every project to — every line of code, every pixel, every SEO tag.
-          </p>
+        <span class="eyebrow-cta">Ready when you are</span>
+        <h2>Let's build something<br><span class="grad-text">cooked to perfection.</span></h2>
+        <p>Tell us about your project and we'll come back with a tailored proposal within 48 hours.</p>
+        <div class="about-cta-btns">
+          <a href="contact.html" class="btn btn-primary">Start your project</a>
+          <a href="portfolio.html" class="btn btn-outline" style="color:rgba(250,240,202,0.85);border-color:rgba(250,240,202,0.3);">View our portfolio</a>
         </div>
-        <div class="reveal from-right" style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;">
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:0.75rem;">🎯</div>
-            <h4 style="font-family:var(--font-display);font-size:1rem;margin-bottom:0.4rem;color:var(--text-1);">Mission</h4>
-            <p style="font-size:0.83rem;color:var(--text-2);">Empower local businesses with world-class digital tools</p>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:0.75rem;">👁️</div>
-            <h4 style="font-family:var(--font-display);font-size:1rem;margin-bottom:0.4rem;color:var(--text-1);">Vision</h4>
-            <p style="font-size:0.83rem;color:var(--text-2);">Be the go-to digital partner for every growing local brand</p>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:0.75rem;">💎</div>
-            <h4 style="font-family:var(--font-display);font-size:1rem;margin-bottom:0.4rem;color:var(--text-1);">Quality</h4>
-            <p style="font-size:0.83rem;color:var(--text-2);">Zero shortcuts — every project meets our highest standard</p>
-          </div>
-          <div class="card" style="text-align:center;">
-            <div style="font-size:2.5rem;margin-bottom:0.75rem;">🤝</div>
-            <h4 style="font-family:var(--font-display);font-size:1rem;margin-bottom:0.4rem;color:var(--text-1);">Partnership</h4>
-            <p style="font-size:0.83rem;color:var(--text-2);">We're invested in your success long after delivery</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Founder Spotlight -->
-  <section class="section-pad" style="background:var(--bg-alt);">
-    <div class="container">
-      <div class="reveal" style="text-align:center;margin-bottom:3.5rem;">
-        <p class="section-label" style="justify-content:center;">Meet the Founder</p>
-        <h2 class="section-title" style="text-align:center;">The Vision Behind Devistic</h2>
-      </div>
-      <div class="team-card reveal">
-        <div class="team-photo" role="img" aria-label="Henry Benjamin, Founder">👤</div>
-        <div class="team-info">
-          <h2>Henry Benjamin</h2>
-          <p class="team-role">Founder & Lead Developer</p>
-          <blockquote class="team-quote">
-            "Every local business has a story worth telling well. My job is to make sure the internet hears it — clearly, beautifully, and loud."
-          </blockquote>
-          <p class="team-bio">
-            Henry founded Devistic after noticing a consistent gap between the quality of local businesses and their online representation. With a passion for clean code, performance engineering, and user-centered design, he set out to build an agency that genuinely cares about client outcomes — not just deliverables.
-          </p>
-          <p class="team-bio" style="margin-top:1rem;">
-            When he's not architecting websites, Henry is exploring new web technologies, mentoring junior developers, and finding ways to make the digital world more accessible for independent business owners.
-          </p>
-          <div style="display:flex;gap:0.75rem;margin-top:1.5rem;flex-wrap:wrap;">
-            <span style="background:rgba(238,150,75,0.12);border:1px solid rgba(238,150,75,0.3);color:var(--orange);border-radius:4px;padding:0.3rem 0.75rem;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.06em;">JavaScript</span>
-            <span style="background:rgba(238,150,75,0.12);border:1px solid rgba(238,150,75,0.3);color:var(--orange);border-radius:4px;padding:0.3rem 0.75rem;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.06em;">React</span>
-            <span style="background:rgba(238,150,75,0.12);border:1px solid rgba(238,150,75,0.3);color:var(--orange);border-radius:4px;padding:0.3rem 0.75rem;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.06em;">SEO Strategy</span>
-            <span style="background:rgba(238,150,75,0.12);border:1px solid rgba(238,150,75,0.3);color:var(--orange);border-radius:4px;padding:0.3rem 0.75rem;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.06em;">UX Design</span>
-            <span style="background:rgba(238,150,75,0.12);border:1px solid rgba(238,150,75,0.3);color:var(--orange);border-radius:4px;padding:0.3rem 0.75rem;font-family:var(--font-ui);font-size:0.75rem;font-weight:700;letter-spacing:0.06em;">Cybersecurity</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Values -->
-  <section class="section-pad">
-    <div class="container">
-      <div class="reveal" style="text-align:center;margin-bottom:3rem;">
-        <p class="section-label" style="justify-content:center;">What We Stand For</p>
-        <h2 class="section-title" style="text-align:center;">Our Core Values</h2>
-      </div>
-      <div class="grid-3">
-        <div class="service-card reveal delay-1" style="text-align:center;">
-          <div class="service-icon" style="margin:0 auto 1.25rem;">🏆</div>
-          <h3 class="service-title">Excellence</h3>
-          <p class="service-desc">We hold every project to a single standard: the best we're capable of. Mediocre isn't in our vocabulary.</p>
-        </div>
-        <div class="service-card reveal delay-2" style="text-align:center;">
-          <div class="service-icon" style="margin:0 auto 1.25rem;">🔍</div>
-          <h3 class="service-title">Transparency</h3>
-          <p class="service-desc">Clear communication, honest timelines, and no hidden surprises. You always know exactly where your project stands.</p>
-        </div>
-        <div class="service-card reveal delay-3" style="text-align:center;">
-          <div class="service-icon" style="margin:0 auto 1.25rem;">🚀</div>
-          <h3 class="service-title">Innovation</h3>
-          <p class="service-desc">We stay ahead of the curve so you don't have to. Latest technologies, best practices, and forward-thinking design.</p>
-        </div>
-        <div class="service-card reveal delay-1" style="text-align:center;">
-          <div class="service-icon" style="margin:0 auto 1.25rem;">❤️</div>
-          <h3 class="service-title">Care</h3>
-          <p class="service-desc">Every client is a partner, not a ticket. Your success genuinely matters to us — we celebrate your wins.</p>
-        </div>
-        <div class="service-card reveal delay-2" style="text-align:center;">
-          <div class="service-icon" style="margin:0 auto 1.25rem;">⚡</div>
-          <h3 class="service-title">Speed</h3>
-          <p class="service-desc">Fast delivery, fast websites, fast responses. Efficiency runs through everything we do without sacrificing quality.</p>
-        </div>
-        <div class="service-card reveal delay-3" style="text-align:center;">
-          <div class="service-icon" style="margin:0 auto 1.25rem;">🌱</div>
-          <h3 class="service-title">Growth</h3>
-          <p class="service-desc">We measure our success by yours. Every solution is designed with your long-term growth trajectory in mind.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="cta-banner">
-    <div class="container">
-      <div class="cta-banner-content reveal">
-        <h2>Ready to Work<br><span class="grad-text">With Us?</span></h2>
-        <p>Let's talk about your vision and how Devistic can bring it to life.</p>
-        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
       </div>
     </div>
   </section>
@@ -179,30 +441,39 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <div class="logo">Devistic<span class="cursor"></span></div>
-          <p>Cooked to perfection — web solutions for businesses that refuse to blend in.</p>
-          <div class="social-links">
-            <a href="#" class="social-link" aria-label="Instagram">📸</a>
-            <a href="#" class="social-link" aria-label="Twitter">🐦</a>
-            <a href="#" class="social-link" aria-label="LinkedIn">💼</a>
-            <a href="#" class="social-link" aria-label="WhatsApp">💬</a>
+          <div class="logo">Devistic<span class="cursor" aria-hidden="true"></span></div>
+          <p>A small studio building modern, fast and secure websites for businesses that refuse to settle for average.</p>
+          <p class="grad-text" style="font-family:var(--font-display);text-transform:uppercase;letter-spacing:0.06em;font-size:0.9rem;margin-top:0.5rem;">Cooked to perfection.</p>
+          <div class="social-links" style="margin-top:1.2rem;">
+            <a href="#" class="social-link" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M9 2v13.5a3.5 3.5 0 1 1-3-3.46"/><path d="M9 7a5 5 0 0 0 5 5V8.5A5 5 0 0 1 12 7"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><rect x="2" y="2" width="20" height="20" rx="4"/><path d="M8 11v5M8 8v.01M12 16v-5M16 16v-3a2 2 0 0 0-4 0"/></svg>
+            </a>
+            <a href="#" class="social-link" aria-label="Twitter / X">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18"><path d="M4 4l16 16M4 20L20 4"/></svg>
+            </a>
           </div>
         </div>
         <div class="footer-col">
-          <h4>Navigation</h4>
+          <h4>Sitemap</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
+            <li><a href="../index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
           <ul>
-            <li><a href="pricing.html">Web Development</a></li>
+            <li><a href="pricing.html">Website Development</a></li>
             <li><a href="pricing.html">Speed Optimization</a></li>
             <li><a href="pricing.html">SEO</a></li>
             <li><a href="pricing.html">Cybersecurity</a></li>
@@ -214,18 +485,22 @@
           <ul>
             <li><a href="mailto:hello@devistic.agency">hello@devistic.agency</a></li>
             <li><a href="tel:+1234567890">+1 (234) 567-890</a></li>
-            <li><a href="contact.html">Send a Message</a></li>
+            <li><a href="contact.html">Send a message</a></li>
           </ul>
         </div>
       </div>
       <div class="footer-bottom">
         <p>© 2025 Devistic. All rights reserved.</p>
-        <div style="display:flex;gap:1.5rem;"><a href="#">Privacy Policy</a><a href="#">Terms</a></div>
+        <div style="display:flex;gap:1.5rem;">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <span style="color:var(--text-3);">Designed &amp; built by the Devistic crew.</span>
+        </div>
       </div>
     </div>
   </footer>
 
   <button id="scroll-top" aria-label="Scroll to top">↑</button>
-  <script src="main.js"></script>
+  <script src="../js/main.js"></script>
 </body>
 </html>
